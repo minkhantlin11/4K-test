@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #020617; /* Slate 950 */
+  color: white;
+}
+
+/* Custom Scrollbar for the carousels */
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a; 
+}
+::-webkit-scrollbar-thumb {
+  background: #22d3ee; 
+  border-radius: 2px;
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+.neon-border {
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(192, 38, 211, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(192, 38, 211, 0.7); }
+}
+
+.manifest-pulse {
+  animation: pulse-glow 2s infinite;
+}
